@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - pegboard@localhost" uuid="aade66e3-a038-49a3-8976-57f56391035f">
+      <secret-storage>master_key</secret-storage>
+      <user-name>ana</user-name>
+      <schema-pattern>pegboard.*</schema-pattern>
+      <default-schemas>pegboard.*</default-schemas>
+    </data-source>
+  </component>
+</project>
