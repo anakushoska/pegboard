@@ -14,22 +14,17 @@
                                                 <label for="figure_id">Figure</label>
                                                 <select class="form-control" name="figure_id" id="figure_id">
                                                 <option value="0" >Select a board</option>
-                                                @php
-                                                    $selectedGameName = " all games";
-                                                @endphp
+
                                                     @foreach ($figures as $figure)
                                                         <option value="{{ $figure->id }}">
-                                                          {{-- {{ ( $childGame->id == \Illuminate\Support\Facades\Input::get('game_id')) ? 'selected' : '' }} --}}
+
                                                                 {{ $figure->name  }}
                                                          </option>
-                                                       {{-- @php
-                                                       if ($childGame->id == \Illuminate\Support\Facades\Input::get('game_id')){
-                                                        $selectedGameName = $childGame->name;
-                                                          }
-                                                        @endphp --}}
+
                                                     @endforeach
                                                 </select>
                                             </div>
+
 
                                             <div class="form-group">
                                                 <label for="time">Total time (s)</label>
@@ -50,16 +45,17 @@
                                                     <input type="number" step="0.01" min="0" class="form-control" id="avg_time" name="avg_time"
                                                     placeholder="Length of time needed for each peg"
                                                         value="{{isset($result)?$result->average_time:''}}">
+
                                             </div>
 
+                                            <div class="col-md-12 px-5 mt-3 text-right">
+                                                    <a href="{{route('patients.index')}}" class="mr-2 text-dark">Cancel</a>
+                                                    <button type="submit" class="btn btn-primary">Submit game</button>
 
-                                   <div class="col-md-12 px-5 mt-3 text-right">
-                                        <a href="{{route('patients.index')}}" class="mr-2 text-dark">Cancel</a>
-                                        <button type="submit" class="btn btn-primary">Submit game</button>
+                                                </div>
 
-                                    </div>
+                                    </form>
 
-                        </form>
 @endsection
 
 

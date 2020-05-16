@@ -87,6 +87,11 @@ class ResultController extends Controller
                 case Game::PATH_FINDER_ID: case Game::FIND_HOME_ID:
 
                     $request->validate(Game::PATH_FINDER_FIND_HOME_CREATION_RULES_DASHBOARD );
+
+                    $figure=Figure::find($request->get('figure_id'));
+                    if ($request->get('used') > $figure->number_of_pegs) {
+                        return redirect()->back()->with('error', "The max number of used pegs can be " . $figure->number_of_pegs ."");
+                    }
                     $input = $request->only(Game::FIELDS_TO_PROCESS_PATH_FINDER_FIND_HOME);
                     $input['result_id']=$request->session()->get("result_id");
                     $input["game_id"]=$id;

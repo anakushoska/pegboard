@@ -28,10 +28,11 @@
             @yield('content')
         </div>
 
-        @include('dashboard.includes.navbar_right')
-
-
     </div>
+    @include('dashboard.includes.footer')
+
+
+
 
 
 <!-- REQUIRED SCRIPTS -->

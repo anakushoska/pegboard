@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pegboard.result_details" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pegboard.result_details" pinned="false" current-in-tab="true">
         <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.result_details">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -113,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pegboard.figures" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pegboard.figures" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.figures">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -477,33 +477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.games">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.migrations">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.result_details">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -543,6 +517,45 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.figures">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.games">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca9241c4/aade66e3-a038-49a3-8976-57f56391035f/pegboard.result_details">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

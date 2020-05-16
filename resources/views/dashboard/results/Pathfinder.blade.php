@@ -15,26 +15,26 @@
                                     >
                                     </path-finder-component>
 
-                                <div class="form-group">
-                                    <label for="total_time">Time (s)</label>
-                                    <input type="number" class="form-control" id="time" name="time"
-                                        placeholder="Total time"
-                                        value="{{isset($result)?$result->total_time:''}}">
-                                </div>
+                                    <div class="form-group">
+                                            <label for="total_time">Time (s)</label>
+                                            <input type="number" min="0" class="form-control" id="time" name="time"
+                                                placeholder="Length of training after the bell sounds"
+                                                value="{{isset($result)?$result->total_time:''}}">
+                                    </div>
 
-                                <div class="form-group">
-                                    <label for="used_figures">Success Rate</label>
-                                    <input type="number" class="form-control" id="success_rate" name="success_rate"
-                                        placeholder="Used figures"
-                                        value="{{isset($result)?$result->used_figures:''}}">
-                                </div>
+                                    <div class="form-group">
+                                            <label for="used_figures">Success Rate (%)</label>
+                                            <input type="number" step="0.01" min="0"  class="form-control" id="success_rate" name="success_rate"
+                                                placeholder="Success rate"
+                                                value="{{isset($result)?$result->used_figures:''}}">
+                                    </div>
 
-                                <div class="form-group">
-                                        <label for="used_figures">Used figures</label>
-                                        <input type="number" class="form-control" id="used" name="used"
-                                            placeholder="Used figures"
-                                            value="{{isset($result)?$result->used_figures:''}}">
-                                </div>
+                                    <div class="form-group">
+                                            <label for="used_figures">Used</label>
+                                            <input type="number" min="0" class="form-control" id="used" name="used"
+                                                placeholder="Number of pegs placed upon completion of training"
+                                                value="{{isset($result)?$result->used_figures:''}}">
+                                    </div>
 
                             <div class="col-md-12 px-5 mt-3 text-right">
                                     <a href="{{route('patients.index')}}" class="mr-2 text-dark">Cancel</a>
