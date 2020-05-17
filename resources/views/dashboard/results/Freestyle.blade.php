@@ -48,7 +48,7 @@
 
                                             </div>
 
-                                            <div class="col-md-12 px-5 mt-3 text-right">
+                                            <div class="col-md-12 px-0 mt-3 text-right">
                                                     <a href="{{route('patients.index')}}" class="mr-2 text-dark">Cancel</a>
                                                     <button type="submit" class="btn btn-primary">Submit game</button>
 

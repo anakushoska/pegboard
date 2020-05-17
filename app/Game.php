@@ -41,34 +41,15 @@ class Game extends Model
         'used',
     ];
 
-    const FIELDS_TO_PROCESS_ROW_BLACKOUT_VS_SR= [
-        'game_id',
+    const FIELDS_TO_PROCESS_STANDARD= [
+
         'time',
         'correct',
         'incorrect',
         'success_rate',
-        'avg_time'
+        'avg_time',
     ];
 
-    const FIELDS_TO_PROCESS_SHAPE = [
-        'figure_id',
-        'shape_id',
-        'time',
-        'correct',
-        'incorrect',
-        'success_rate',
-        'avg_time'
-    ];
-
-    const FIELDS_TO_PROCESS_RANDOMIZER_MEMORY_SS = [
-        'figure_id',
-        'target',
-        'time',
-        'correct',
-        'incorrect',
-        'success_rate',
-        'avg_time'
-    ];
 
     const FREESTYLE_CREATION_RULES_DASHBOARD = [
         'figure_id' =>'required',
@@ -84,32 +65,15 @@ class Game extends Model
         'success_rate' =>'required|between:0,99.99',
     ];
 
-    const ROW_BLACKOUT_VS_SR_CREATION_RULES_DASHBOARD = [
-        'game_id' =>'required',
+    const STANDARD_CREATION_RULES_DASHBOARD = [
+
         'time' => 'required|integer|min:1',
         'correct' => 'required|integer|min:1',
         'incorrect' => 'required|integer|min:1',
         'success_rate' =>'required|between:0,99.99',
         'avg_time' => 'required|between:0,99.99',
     ];
-    const SHAPE_CREATION_RULES_DASHBOARD = [
-        'figure_id' =>'required',
-        'shape_id' =>'required',
-        'time' => 'required|integer|min:1',
-        'correct' => 'required|integer|min:1',
-        'incorrect' => 'required|integer|min:1',
-        'success_rate' =>'required|between:0,99.99',
-        'avg_time' => 'required|between:0,99.99',
-    ];
-    const RANDOMIZER_MEMORY_SS_CREATION_RULES_DASHBOARD = [
-        'figure_id' =>'required',
-        'target' =>'required',
-        'time' => 'required|integer|min:1',
-        'correct' => 'required|integer|min:1',
-        'incorrect' => 'required|integer|min:1',
-        'success_rate' =>'required|between:0,99.99',
-        'avg_time' => 'required|between:0,99.99',
-    ];
+
 
 
 

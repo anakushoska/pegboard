@@ -4,8 +4,8 @@
                 <div class="form-group">
                     <label>Figure <span class="text-danger">*</span></label>
                     <select  name="figure_id" id="figure_id" class="form-control"
-                            v-model="figureId">
-
+                            v-model="figureId" placeholder="Select a figure">
+                        <option value="0">Select a figure</option>
                         <option v-for="figure in figuresOneThree" v-bind:value="figure.id">
                             {{ figure.name }}
                         </option>
@@ -14,8 +14,8 @@
 
                 <div class="form-group" v-if="figureId === 1">
                     <label>Training type <span class="text-danger">*</span></label>
-                    <select name="shape_id" id="shape_id" class="form-control" v-model=shape>
-
+                    <select name="shape_id" id="shape_id" class="form-control" placeholder="Select a shape" v-model=shape>
+                        <option value="0">Select a shape</option>
                         <option v-for="s in shapesFigureOne" v-bind:value="s.id">
                             {{ s.name }}
                         </option>
@@ -25,7 +25,7 @@
                  <div class="form-group" v-if="figureId === 3">
                     <label>Training type <span class="text-danger">*</span></label>
                     <select name="shape_id" id="shape_id" class="form-control" v-model=shape>
-
+                                <option value="0">Select a shape</option>
                         <option v-for="s in shapesFigureTwo" v-bind:value="s.id">
                             {{ s.name }}
                         </option>

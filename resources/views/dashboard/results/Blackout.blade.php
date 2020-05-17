@@ -12,8 +12,6 @@
                                     <div class="form-group">
                                             <label>Training type</label>
                                         <select class="form-control" name="game_id">
-
-                                            <option value="0" >Select a training type</option>
                                             @php
                                                 $selectedGameName = " all games";
                                             @endphp
