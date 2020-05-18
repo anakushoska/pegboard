@@ -95,28 +95,29 @@ class ResultController extends Controller
 
                         case Game::SHAPE_COMPLETION_ID :case Game::RANDOMIZER_ID: case Game::SMASH_A_MOLE_ID: case Game::SNAKE_TRAP_ID: case Game::MEMORY_PLACEMENT_ID: case Game::SIMON_SAYS_1_ID: case Game::SIMON_SAYS_2_ID:
 
+                            $input["game_id"]=$id;
+
                             $request->validate([
                                 "figure_id" => "required|integer|min:1",
                             ]);
                             $input["figure_id"]=$request->get("figure_id");
 
-                            if (Game::SHAPE_COMPLETION_ID) {
+                            if ($request->has("level_id")){
+                                $input["level_id"]=$request->get("level_id");
+                            }
+
+                            if ($request->has('target')){
+                                $input["target"]=$request->get("target");
+                            }
+
+                            if ($id == Game::SHAPE_COMPLETION_ID) {
+
                                 $request->validate([
                                     "shape_id" => "required",
                                 ]);
                                 $input["shape_id"]=$request->get("shape_id");
                             }
-                            if ($game->number_of_levels){
 
-                                $request->validate([
-                                    "figure_id" => "required|integer|min:1",
-                                ]);
-                                $input["level_id"]=$request->get("level_id");
-                            }
-
-                            if ($request->has('target_id')){
-                                $input["target_id"]=$request->get("target_id");
-                            }
 
                         break;
                     }
@@ -124,10 +125,10 @@ class ResultController extends Controller
                     if (($input['correct'] + $input['incorrect']) > $figure->number_of_pegs) {
                         return redirect()->back()->with('error', "The sum of correct and incorrect can't be greater than " . $figure->number_of_pegs ."");
                     }
+
                 }
 
             $input['result_id']=$request->session()->get("result_id");
-            $input["game_id"]=$id;
             $input["name"]=$game->name;
             $resultDetails= ResultDetails::create($input);
             $resultDetails->save();
