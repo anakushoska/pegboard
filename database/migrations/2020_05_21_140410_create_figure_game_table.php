@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShapesTable extends Migration
+class CreateFigureGameTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateShapesTable extends Migration
      */
     public function up()
     {
-        Schema::create('shapes', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->string('name');
-            $table->integer('total_pegs');
+        Schema::create('figure_game', function (Blueprint $table) {
+            $table->smallInteger("game_id")->unsigned();
             $table->tinyInteger("figure_id")->unsigned();
+            $table->string("level");
+            $table->integer("target")->unsigned()->nullable();
 
             $table->foreign("figure_id")->references("id")->on("figures");
+            $table->foreign("game_id")->references("id")->on("games");
+
         });
     }
 
@@ -30,6 +32,6 @@ class CreateShapesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shapes');
+        Schema::dropIfExists('figure_game');
     }
 }

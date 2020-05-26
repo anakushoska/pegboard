@@ -21,14 +21,8 @@ Vue.config.devtools = true;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('figures-component', require('./components/FiguresComponent.vue').default);
-Vue.component('shapes-component', require('./components/ShapesComponent.vue').default);
-Vue.component('randomizer-component', require('./components/RandomizerComponent.vue').default);
-Vue.component('snake-trap-component', require('./components/SnaketrapComponent.vue').default);
-Vue.component('memory-placement-component', require('./components/MemoryPlacementComponent.vue').default);
-Vue.component('simon-says-component', require('./components/SimonSaysComponent.vue').default);
-Vue.component('path-finder-component', require('./components/PathFinderComponent.vue').default);
-Vue.component('test-component', require('./components/TestComponent.vue'));
+Vue.component('figure-levels-component', require('./components/FigureLevelsComponent.vue').default);
+
 
 
 /**

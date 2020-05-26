@@ -16,8 +16,11 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->smallIncrements('id');
             $table->string('name');
+            $table->string('training_type');
             $table->text('description')->nullable();
             $table->integer("parent_id")->unsigned();
+            $table->integer("target")->nullable()->unsigned();
+            $table->integer("stages")->nullable()->unsigned();
         });
     }
 

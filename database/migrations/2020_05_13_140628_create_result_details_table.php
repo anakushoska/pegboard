@@ -19,8 +19,7 @@ class CreateResultDetailsTable extends Migration
             $table->smallInteger("game_id")->unsigned();
             $table->integer("result_id")->unsigned();
             $table->tinyInteger("figure_id")->unsigned();
-            $table->Integer("shape_id")->nullable()->unsigned();
-            $table->Integer("level_id")->nullable()->unsigned();
+            $table->string("level_id")->nullable();
             $table->Integer("target")->nullable()->unsigned();
             $table->integer("time")->nullable()->unsigned();
             $table->integer("correct")->nullable()->unsigned();
@@ -30,10 +29,8 @@ class CreateResultDetailsTable extends Migration
             $table->integer("used")->nullable()->unsigned();
             $table->timestamps();
 
-            $table->foreign("shape_id")->references("id")->on("shapes");
             $table->foreign("figure_id")->references("id")->on("figures");
-            $table->foreign("level_id")->references("id")->on("levels");
-            $table->foreign("result_id")->references("id")->on("results");
+            $table->foreign("result_id")->references("id")->on("results")->onDelete('cascade');;
             $table->foreign("game_id")->references("id")->on("games");
         });
     }

@@ -40,4 +40,18 @@ class PatientController extends Controller
 
         return redirect()->route("patients.index")->with("success", "New patient created");
     }
+
+    public function destroy($id)
+    {
+
+        $patient = Patient::find($id);
+
+            // if (!$patient){
+            //     return redirect()->route('patients.index')->withErrors(["That result doesn't exist "]);
+            // }
+        // DB::table("results")->where("result_id", $id)->delete();
+        $patient->delete();
+
+        return redirect()->back()->with('success', "The result is deleted");
+        }
 }

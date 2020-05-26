@@ -19,6 +19,7 @@ class CreatePatientsTable extends Migration
             $table->string('email');
             $table->string('gender');
             $table->string('date_of_birth');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

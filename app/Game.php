@@ -27,51 +27,22 @@ class Game extends Model
     const FIND_HOME_ID=27;
 
 
-    const FIELDS_TO_PROCESS_FREESTYLE = [
-        'figure_id',
-        'time',
-        'used',
-        'avg_time',
-    ];
-
-    const FIELDS_TO_PROCESS_PATH_FINDER_FIND_HOME= [
-        'figure_id',
-        'time',
-        'success_rate',
-        'used',
-    ];
 
     const FIELDS_TO_PROCESS_STANDARD= [
 
         'time',
         'correct',
         'incorrect',
-        'success_rate',
-        'avg_time',
+
     ];
 
 
-    const FREESTYLE_CREATION_RULES_DASHBOARD = [
-        'figure_id' =>'required',
-        'time' => 'required|integer|min:1',
-        'used' => 'required|integer|min:1',
-        'avg_time' => 'required|between:0,99.99',
-    ];
-
-    const PATH_FINDER_FIND_HOME_CREATION_RULES_DASHBOARD = [
-        'figure_id' =>'required',
-        'time' => 'required|integer|min:1',
-        'used' => 'required|integer|min:1',
-        'success_rate' =>'required|between:0,99.99',
-    ];
 
     const STANDARD_CREATION_RULES_DASHBOARD = [
 
         'time' => 'required|integer|min:1',
         'correct' => 'required|integer|min:1',
-        'incorrect' => 'required|integer|min:1',
-        'success_rate' =>'required|between:0,99.99',
-        'avg_time' => 'required|between:0,99.99',
+        'incorrect' => 'required|integer',
     ];
 
 
@@ -88,5 +59,12 @@ class Game extends Model
     public function childrenGames()
     {
         return $this->hasMany(Game::class, "parent_id", "id");
+    }
+
+
+    public function figures()
+    {
+        return $this->belongsToMany('App\Figure')
+                    ->withPivot('level', 'target');
     }
 }

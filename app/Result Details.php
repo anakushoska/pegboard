@@ -21,5 +21,11 @@ class ResultDetails extends Model
         return $this->belongsTo(Figure::class, "figure_id");
     }
 
+    public function result()
+    {
+        return $this->belongsTo(Result::class);
+    }
+
+
 }
 

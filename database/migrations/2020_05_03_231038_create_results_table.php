@@ -18,7 +18,7 @@ class CreateResultsTable extends Migration
             $table->integer("patient_id")->unsigned();
             $table->timestamps();
 
-            $table->foreign("patient_id")->references("id")->on("patients");
+            $table->foreign("patient_id")->references("id")->on("patients")->onDelete('cascade');;
         });
     }
 

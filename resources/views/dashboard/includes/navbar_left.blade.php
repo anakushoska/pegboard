@@ -35,7 +35,7 @@
                             </li>
 
                             <li class="nav-item has">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('results.index')}}" class="nav-link">
                                     {{-- <i class="nav-icon {{array_key_exists('icon', $menuItem) && $menuItem['icon']?$menuItem['icon']:'fa fa-circle-o'}}"></i> --}}
                                     <p>Results</p>
                                 </a>
