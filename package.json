@@ -28,7 +28,7 @@
         "font-awesome": "^4.7.0",
         "node-sass": "^4.13.0",
         "admin-lte": "^3.0.0-alpha",
-        "ajv": "^6.10.2",
+        "ajv": "^6.12.3",
         "anchorme": "^1.1.2",
         "dirrty": "^1.0.0",
         "luxon": "^1.17.3",
